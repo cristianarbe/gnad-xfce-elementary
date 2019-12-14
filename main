@@ -2,12 +2,14 @@
 
 set -e
 
-for pkg in pkg/*; do
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+for pkg in "$SCRIPTPATH"/pkg/*; do
     # shellcheck disable=SC1090
     . "$pkg"
 done
 
-for pkg in internal/*; do
+for pkg in "$SCRIPTPATH"internal/*; do
     # shellcheck disable=SC1090
     . "$pkg"
 done
@@ -26,11 +28,11 @@ main() {
     printf "Done\\n"
 
     printf "Installing panel..."
-    changepanel resources/panel.xml resources/panel
+    changepanel "$SCRIPTPATH"resources/panel.xml "$SCRIPTPATH"resources/panel
     printf "Done\\n"
 
     printf "Installing wallpaper..."
-    changewallpaper resources/wallpaper.jpg
+    changewallpaper "$SCRIPTPATH"resources/wallpaper.jpg
     printf "Done\\n"
 
     printf "Installing cursors..."
