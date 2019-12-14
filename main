@@ -9,7 +9,7 @@ for pkg in "$SCRIPTPATH"/pkg/*; do
     . "$pkg"
 done
 
-for pkg in "$SCRIPTPATH"internal/*; do
+for pkg in "$SCRIPTPATH"/internal/*; do
     # shellcheck disable=SC1090
     . "$pkg"
 done
