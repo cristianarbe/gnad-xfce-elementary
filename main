@@ -9,7 +9,7 @@ for pkg in "$SCRIPTPATH"/pkg/*; do
     . "$pkg"
 done
 
-for pkg in "$SCRIPTPATH"internal/*; do
+for pkg in "$SCRIPTPATH"/internal/*; do
     # shellcheck disable=SC1090
     . "$pkg"
 done
@@ -28,11 +28,11 @@ main() {
     printf "Done\\n"
 
     printf "Installing panel..."
-    changepanel "$SCRIPTPATH"resources/panel.xml "$SCRIPTPATH"resources/panel
+    changepanel "$SCRIPTPATH"/resources/panel.xml "$SCRIPTPATH"resources/panel
     printf "Done\\n"
 
     printf "Installing wallpaper..."
-    changewallpaper "$SCRIPTPATH"resources/wallpaper.jpg
+    changewallpaper "$SCRIPTPATH"/resources/wallpaper.jpg
     printf "Done\\n"
 
     printf "Installing cursors..."
