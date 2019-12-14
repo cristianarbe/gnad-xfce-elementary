@@ -5,11 +5,11 @@ installfonts() {
         mkdir -p ~/.fonts
     fi
 
-    if test ! -f ~/.fonts/NotoSans-Regular.ttf; then
-        wget https://fonts.google.com/download?family=Noto%20Sans -O ~/.fonts/noto.zip
+    if test ! -f ~/.fonts/OpenSans-Regular.ttf; then
+        wget https://fonts.google.com/download?family=Open%20Sans -O ~/.fonts/open.zip
         cd ~/.fonts || exit
-        extract noto.zip
+        extract open.zip
     fi
-    changefont "Noto Sans 11"
+    changefont "Open Sans 11"
 
 }
