@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=exo-open --launch MailReader %u
+Icon=emblem-mail
+StartupNotify=true
+Terminal=false
+Categories=Network;X-XFCE;X-Xfce-Toplevel;
+OnlyShowIn=XFCE;
+X-XFCE-MimeType=x-scheme-handler/mailto;
+X-AppStream-Ignore=True
+Name=Mail Reader
+Name[en_GB]=Mail Reader
+Comment=Read your email
+Comment[en_GB]=Read your e-mail
+X-XFCE-Source=file:///usr/share/applications/exo-mail-reader.desktop
